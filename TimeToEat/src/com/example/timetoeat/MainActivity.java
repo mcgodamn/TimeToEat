@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 if(isExtStorageReadable()){
                     jumptoadd();
                 }
-                else Toast.makeText(MainActivity.this, "µLªkÅª¨ú¥~³¡¸Ë¸m!", Toast.LENGTH_SHORT).show();
+                else Toast.makeText(MainActivity.this, "ç„¡æ³•è®€å–å¤–éƒ¨è£ç½®!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 count[j].name = shop[i].name;
                 count[j].love = shop[i].love;
                 j++;
-            }
+            } 
         }
         for(int i=0;i<j;i++){
             temp+=count[i].love;
@@ -229,19 +229,19 @@ public class MainActivity extends AppCompatActivity {
                 			}
                 		}
                 		catch(bigexception e){
-                			Toast.makeText(MainActivity.this, "³ß·R«×¤Ó¤j¤F³á!", Toast.LENGTH_SHORT).show();
+                			Toast.makeText(MainActivity.this, "å–œæ„›åº¦å¤ªå¤§äº†å–”!", Toast.LENGTH_SHORT).show();
                         	renew();
                         	return;
                 		}
                 	}
                 	catch(zeroexception e){
-                		Toast.makeText(MainActivity.this, "³ß·R«×¤£¯à¬O0!", Toast.LENGTH_SHORT).show();
+                		Toast.makeText(MainActivity.this, "å–œæ„›åº¦ä¸èƒ½æ˜¯0!", Toast.LENGTH_SHORT).show();
                     	renew();
                     	return;
                 	}
                 }
                 catch(emptyexception e){
-                	Toast.makeText(MainActivity.this, "©±®a¦W¸ò³ß·R«×¤£¯àªÅ¥Õ!", Toast.LENGTH_SHORT).show();
+                	Toast.makeText(MainActivity.this, "åº—å®¶åè·Ÿå–œæ„›åº¦ä¸èƒ½ç©ºç™½!", Toast.LENGTH_SHORT).show();
                 	renew();
                 	return;
                 }
@@ -250,32 +250,32 @@ public class MainActivity extends AppCompatActivity {
                             int love = Integer.parseInt(shoplove.getText().toString());
                             if (specb.isChecked() && lazycb.isChecked()) {
                                 fw.write('\n' + name + " " + love + " 1 1");
-                                Toast.makeText(MainActivity.this, "²K¥[¦¨¥\!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "æ·»åŠ æˆåŠŸ!", Toast.LENGTH_SHORT).show();
                                 renew();
                                 fw.close();
                                 return;
                             } else if (specb.isChecked()) {
                                 fw.write('\n' + name + " " + love + " 1 0");
-                                Toast.makeText(MainActivity.this, "²K¥[¦¨¥\!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "æ·»åŠ æˆåŠŸ!", Toast.LENGTH_SHORT).show();
                                 renew();
                                 fw.close();
                                 return;
                             } else if (lazycb.isChecked()) {
                                 fw.write('\n' + name + " " + love + " 0 1");
-                                Toast.makeText(MainActivity.this, "²K¥[¦¨¥\!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "æ·»åŠ æˆåŠŸ!", Toast.LENGTH_SHORT).show();
                                 renew();
                                 fw.close();
                                 return;
                             } else {
                                 fw.write('\n' + name + " " + love + " 0 0");
-                                Toast.makeText(MainActivity.this, "²K¥[¦¨¥\!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "æ·»åŠ æˆåŠŸ!", Toast.LENGTH_SHORT).show();
                                 renew();
                                 fw.close();
                                 return;
                             }
                         } catch (IOException e) {
                         	renew();
-                            Toast.makeText(MainActivity.this, "²K¥[¥¢±Ñ!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "æ·»åŠ å¤±æ•—!", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }
@@ -339,11 +339,11 @@ public class MainActivity extends AppCompatActivity {
                             shop[i].love = Integer.parseInt(inp[1]);
                             shop[i].spe = Integer.parseInt(inp[2]);
                             shop[i].lazy = Integer.parseInt(inp[3]);
-                            i++;//i³Ì«á·|¬OÁ`µ§¼Æ
+                            i++;//iæœ€å¾Œæœƒæ˜¯ç¸½ç­†æ•¸
                         }
                     }
                     else {
-                        result.setText("§ä¤£¨ì¸ê®Æ³á!");
+                        result.setText("æ‰¾ä¸åˆ°è³‡æ–™å–”!");
                         inputstream.close();
                         return;
                     }
@@ -351,37 +351,37 @@ public class MainActivity extends AppCompatActivity {
                     	zeroi(i);
                     }
                     catch(zeroiexception e){
-                    	result.setText("¨S¦³¬ÛÃö©±®a³á!");
+                    	result.setText("æ²’æœ‰ç›¸é—œåº—å®¶å–”!");
                         inputstream.close();
                         return;
                     }
                     if(specb.isChecked()&&lazycb.isChecked()){
-                        result.setText("´N¨M©w¬O"+ spela(i) +"³o¶¡©±¤F!");
+                        result.setText("å°±æ±ºå®šæ˜¯"+ spela(i) +"é€™é–“åº—äº†!");
                         inputstream.close();
                         return;
                     }
                     else if(specb.isChecked()||lazycb.isChecked()){
                         if(specb.isChecked()){
-                            result.setText("´N¨M©w¬O"+ spenl(i) +"³o¶¡©±¤F!");
+                            result.setText("å°±æ±ºå®šæ˜¯"+ spenl(i) +"é€™é–“åº—äº†!");
                             inputstream.close();
                             return;
                         }
-                        else result.setText("´N¨M©w¬O"+ lanspe(i) +"³o¶¡©±¤F!");
+                        else result.setText("å°±æ±ºå®šæ˜¯"+ lanspe(i) +"é€™é–“åº—äº†!");
                         inputstream.close();
                         return;
                     }
-                    else result.setText("´N¨M©w¬O"+ nlnspe(i) +"³o¶¡©±¤F!");
+                    else result.setText("å°±æ±ºå®šæ˜¯"+ nlnspe(i) +"é€™é–“åº—äº†!");
                     inputstream.close();
                     return;
                 }
                 catch (FileNotFoundException e2)
                 {
-                    result.setText("§ä¤£¨ì¸ê®ÆÀÉ®×³á!");
+                    result.setText("æ‰¾ä¸åˆ°è³‡æ–™æª”æ¡ˆå–”!");
                     return;
                 }
             }
             else{
-                result.setText("µLªkÅª¨ú¥~³¡¸Ë¸m!");
+                result.setText("ç„¡æ³•è®€å–å¤–éƒ¨è£ç½®!");
                 return;
             }
         }
