@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.timetoeat.MainActivity" >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:id="@+id/back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minHeight="20dp"
+        android:maxWidth="50dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加你喜愛的店家吧!"
+        android:id="@+id/addhello"
+        android:layout_below="@+id/back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopname"
+        android:layout_below="@+id/addhello"
+        android:layout_marginTop="61dp"
+        android:layout_toRightOf="@+id/back"
+        android:layout_alignRight="@+id/addhello"
+        android:layout_alignEnd="@+id/addhello"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="店家名"
+        android:id="@+id/textViewshop"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/shopname"
+        android:layout_toLeftOf="@+id/shopname"
+        android:layout_toStartOf="@+id/shopname" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/shoplove"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/shopname"
+        android:layout_alignEnd="@+id/shopname"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/shopname"
+        android:layout_alignStart="@+id/shopname" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="喜愛程度"
+        android:layout_alignTop="@+id/shoplove"
+        android:layout_toLeftOf="@+id/shoplove"
+        android:layout_toStartOf="@+id/shoplove"
+        android:id="@+id/textviewlove"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="這是間特殊的店嗎?"
+        android:id="@+id/addspecb"
+        android:layout_below="@+id/shoplove"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:checked="false"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="這家店離你家近嗎?"
+        android:id="@+id/addlazycb"
+        android:layout_below="@+id/addspecb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:checked="false"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加!"
+        android:id="@+id/addsub"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:textSize="20dp" />
+</RelativeLayout>
