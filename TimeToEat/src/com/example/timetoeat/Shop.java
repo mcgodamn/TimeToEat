@@ -16,5 +16,6 @@ public class Shop {
 		this.love=l;
 		this.spe=s;
 		this.lazy=la;
+		
 	}
 }
